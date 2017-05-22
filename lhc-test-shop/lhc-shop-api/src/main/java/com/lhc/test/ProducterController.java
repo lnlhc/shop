@@ -1,6 +1,7 @@
 package com.lhc.test;
 
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +15,7 @@ import com.lhc.shop.utils.Response;
 @RequestMapping("/shop/jms")
 public class ProducterController {
 	private final Logger logger = Logger.getLogger(getClass());
-	
+	@Autowired
 	private JmsTemplate jms;
 	
 	/**
@@ -41,6 +42,7 @@ public class ProducterController {
 					.setMessage(ActiveStatusConstants.Common.SUCCESS.message)
 					.toJSON();
 		} catch (Exception e) {
+			e.printStackTrace();
 			logger.info("发送短息失败");
 			return Response.build()
 					.setStatus(ActiveStatusConstants.Common.SYSTEM_ERROE.status)
