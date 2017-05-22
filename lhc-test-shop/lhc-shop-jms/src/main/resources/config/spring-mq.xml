@@ -6,8 +6,6 @@
 	<!-- 配置JMS链接模版 -->
 	<bean id="connectionFactory" class="org.apache.activemq.spring.ActiveMQConnectionFactory">
 		<property name="brokerURL" value="${brokerURL}" />
-		<property name="userName" value="${userName}" />
-		<property name="password" value="${password}" />
 	</bean>
 
 	<!-- 配置JMS模版 -->

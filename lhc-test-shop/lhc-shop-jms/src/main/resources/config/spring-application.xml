@@ -21,6 +21,6 @@
 	<bean id="configProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
 		<property name="locations" value="classpath:/config/*Config.properties" />
 	</bean>
-	
+	<import resource="classpath*:/config/spring-mq.xml"></import>
 	
 </beans>
