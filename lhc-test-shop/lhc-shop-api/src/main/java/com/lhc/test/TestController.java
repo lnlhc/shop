@@ -20,7 +20,7 @@ import com.lhc.shop.utils.Response;
 import net.sf.json.JSONObject;
 
 @Controller
-@RequestMapping("/shop/test")
+@RequestMapping("/shop/test")    
 public class TestController {
 	private final Logger logger = Logger.getLogger(getClass());
 	
