@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+
+<script type="text/javascript" src="jquery-1.7.2.js"></script>
+<script type="text/javascript" src="json2.js"></script>
+
+</head>
+<body>
+	<div>
+		Methods: <input type="radio" name="op" value="get">get 
+				 <input type="radio" name="op" value="post">post
+	</div>
+	<br>
+	<div>
+		url &nbsp;&nbsp;<input type="text" id="url" style="width: 900px;">
+	</div>
+	<br>
+	<div>
+		params &nbsp;&nbsp;<textarea rows="1" cols="100" id="params"></textarea>
+	</div>
+	<br>
+	<br>
+	<div >
+		token <textarea rows="1" cols="100" id="token"></textarea>
+	</div>
+	<br>
+	<div>
+		result <textarea rows="5" cols="100" id="result"></textarea>&nbsp;&nbsp;<a href="#" id="submit">submit</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" id="reset">reset</a>
+	</div>
+	
+	<script type="text/javascript">
+		$(function() {
+			$("#reset").click(function() {
+				$("#url").val("");
+				$("#params").val("");
+				$("#token").val("");
+				$("#result").val("");
+			});
+			
+			$("#submit").click(function() {
+				
+				var type = $('input:radio[name="op"]:checked').val();
+				var url = $("#url").val();
+				var params = $("#params").val();
+				if(params==""){
+					params="{}";
+				}
+				var token = $("#token").val();
+				var result = $("#result").val();
+			
+				$.ajax({ 
+					url: url , 
+					type:type,
+					dataType:"json" , 
+					beforeSend:function (XMLHttpRequest) {
+						XMLHttpRequest.setRequestHeader("token", token);
+					},
+					<!-- json请求 -->
+					//contentType:"application/json;charset=UTF-8" ,
+					//accepts:{xml: "application/xml, text/xml",html: "text/html",script: "text/javascript,application/javascript",json: "application/json, text/javascript",text: "text/plain",_default: "*/*"},
+					//data:params,
+					
+					<!-- 非json请求 -->
+					data:JSON.parse(params),
+					
+					//{"username":"jack","password":"asdf"}
+					///DJR_apis/user/get.do
+					success: function(data){
+						$("#result").val(JSON.stringify(data));
+					}
+				});
+				
+				
+			});
+		});
+	</script>
+
+</body>
+</html>

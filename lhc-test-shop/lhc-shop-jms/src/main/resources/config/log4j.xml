@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd"> -->
+<!DOCTYPE log4j:configuration SYSTEM "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd">
+
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+	<!-- 标准输出配置 -->
+
+	<appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="[DJR-framework] %-d{yyyy-MM-dd HH:mm:ss} [%c]-[%p] - %m%n" />
+		</layout>
+	</appender>
+
+	<!-- 基础输出配置 -->
+	<appender name="DEBUG" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="${catalina.home}/logs/debug" />
+		<param name="Append" value="true" />
+		<param name="DatePattern" value="'_'yyyy-MM-dd'.log'" />
+		<param name="Encoding" value="utf8" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="[DJR-framework] %-d{yyyy-MM-dd HH:mm:ss} [%c]-[%p] - %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="DEBUG" />
+			<param name="LevelMax" value="DEBUG" />
+		</filter>
+	</appender>
+
+
+	<appender name="INFO" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="${catalina.home}/logs/info" />
+		<param name="Append" value="true" />
+		<param name="DatePattern" value="'_'yyyy-MM-dd'.log'" />
+		<param name="Encoding" value="utf8" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="[DJR-framework] %-d{yyyy-MM-dd HH:mm:ss} [%c]-[%p] - %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="INFO" />
+			<param name="LevelMax" value="INFO" />
+		</filter>
+	</appender>
+
+
+	<appender name="WARN" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="${catalina.home}/logs/warn" />
+		<param name="Append" value="true" />
+		<param name="DatePattern" value="'_'yyyy-MM-dd'.log'" />
+		<param name="Encoding" value="utf8" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="[DJR-framework] %-d{yyyy-MM-dd HH:mm:ss} [%c]-[%p] - %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="WARN" />
+			<param name="LevelMax" value="WARN" />
+		</filter>
+	</appender>
+
+	<appender name="ERROR" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="${catalina.home}/logs/error" />
+		<param name="Append" value="true" />
+		<param name="DatePattern" value="'_'yyyy-MM-dd'.log'" />
+		<param name="Encoding" value="utf8" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="[DJR-framework] %-d{yyyy-MM-dd HH:mm:ss} [%c]-[%p] - %m%n" />
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="ERROR" />
+			<param name="LevelMax" value="ERROR" />
+		</filter>
+	</appender>
+	<!-- 基本輸出配置完畢 -->
+
+
+	<!-- 上線時 公有日誌配置 -->
+	<logger name="com.lhc" additivity="false">
+		<level value="DEBUG" />
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="DEBUG" />
+		<appender-ref ref="INFO" />
+		<appender-ref ref="WARN" />
+		<appender-ref ref="ERROR" />
+	</logger>
+
+	<logger name="com.xinhe99.commons.datasources.multiple">
+		<level value="DEBUG" />
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="datasource_debug" />
+	</logger>
+
+	<appender name="dubboAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="${catalina.home}/logs/dubbo.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd'.log'" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{MMdd HH:mm:ss SSS\} %-5p] [%t] %c{3\} - %m%n" />
+		</layout>
+	</appender>
+	<logger name="com.alibaba.dubbo" additivity="false">
+		<priority value="ERROR" />
+		<appender-ref ref="dubboAppender" />
+	</logger>
+	<!-- 基本输出将所有日志只输出到控制台 -->
+	<root>
+		<priority value="INFO" />
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="DEBUG" />
+		<appender-ref ref="INFO" />
+		<appender-ref ref="WARN" />
+		<appender-ref ref="ERROR" />
+	</root>
+
+</log4j:configuration>
