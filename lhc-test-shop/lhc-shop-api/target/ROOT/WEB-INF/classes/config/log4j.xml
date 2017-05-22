@@ -78,7 +78,7 @@
 
 
 	<!-- 上線時 公有日誌配置 -->
-	<logger name="com.xinhe99" additivity="false">
+	<logger name="com.lhc" additivity="false">
 		<level value="DEBUG" />
 		<appender-ref ref="STDOUT" />
 		<appender-ref ref="DEBUG" />
