@@ -1,5 +1,0 @@
-https://github.com/lnlhc/shop.git
-
-hello world!
-
-nihao 
