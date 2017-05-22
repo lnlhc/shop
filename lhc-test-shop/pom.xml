@@ -1,0 +1,63 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.lhc-shop</groupId>
+  <artifactId>lhc-test-shop</artifactId>
+  <version>1.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <modules>
+  	<module>lhc-shop-api</module>
+  	<module>lhc-shop-service</module>
+  </modules>
+  <!--******************    配置文件   ****************** -->
+  
+  <profiles>
+    	<profile>
+            <id>local</id>
+            <activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+            <properties>
+                
+                <djr.driverClass>org.srdbsql.Driver</djr.driverClass>
+                <djr.url>jdbc:srdbsql://10.167.202.61:1976/djr0316</djr.url>
+                <djr.user>srdb_user</djr.user>
+                <djr.password>srdb_user</djr.password>
+                
+            </properties>
+        </profile>
+    </profiles>
+  
+<build>
+		<finalName>ROOT</finalName>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>**/*.properties</include>
+				</includes>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>false</filtering>
+				<excludes>
+					<exclude>**/*Config.properties</exclude>
+				</excludes>
+			</resource>
+		</resources>
+</build>
+<dependencies>
+ 		<dependency>
+            <groupId>net.sf.json-lib</groupId>
+            <artifactId>json-lib</artifactId>
+            <classifier>jdk15</classifier>
+            <version>2.4</version>
+        </dependency>
+        
+        <dependency>
+		  <groupId>org.srdbsql</groupId>
+		  <artifactId>srdbsql.Driver</artifactId>
+		  <version>1.0</version>
+		</dependency>
+</dependencies>
+</project>
