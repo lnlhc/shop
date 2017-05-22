@@ -23,11 +23,7 @@
   </build>
   
   <dependencies>
-	  	<dependency>
-	  		<groupId>com.lhc-shop</groupId>
-	  		<artifactId>lhc-shop-service</artifactId>
-	  		<version>1.0.1-SNAPSHOT</version>
-	  	</dependency>
+	  	
   	
   		<dependency>  
             <groupId>org.apache.poi</groupId>  
