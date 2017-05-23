@@ -20,7 +20,7 @@ public class ConsumerController{
 	
 	 
 
-	 public  String receiveMotorist() throws Exception{  
+	/* public  String receiveMotorist() throws Exception{  
 		    while(true){
 		    	TextMessage message  = (TextMessage)jms.receive();  
 		    	if (message != null) {
@@ -43,5 +43,5 @@ public class ConsumerController{
 		} catch (Exception e) {
 			return"失敗";
 		}
-	 }
+	 }*/
 }

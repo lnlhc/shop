@@ -26,4 +26,20 @@
 		<constructor-arg index="0" value="LHCSHOPQUEUES" />
 	</bean>
 
+
+
+	<!--消息获取类 -->
+	<bean id="messageReceiver" class="com.lhc.test.MessageReceiver"></bean>
+	
+	
+	<!--给消息获取类加个监听让他能自动获取消息 -->
+	<bean id="listenerContainer" class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+		<property name="connectionFactory" ref="connectionFactory"></property>
+		<property name="destination" ref="defaultDestination"></property>
+		<property name="messageListener" ref="messageReceiver"></property>
+		<!-- 该属性值默认为false，这样JMS在进行消息监听的时候就会进行事务控制， 当在接收消息时监听器执行失败时JMS就会对接收到的消息进行回滚， -->
+		<property name="sessionTransacted" value="false" />
+	</bean>
+	
+	
 </beans>
