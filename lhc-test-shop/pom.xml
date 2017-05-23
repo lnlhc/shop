@@ -132,7 +132,7 @@
 		<dependency>  
                 <groupId>org.springframework</groupId>  
                 <artifactId>spring-jms</artifactId>  
-                <version>3.2.4.RELEASE</version>  
+                <version>4.1.2.RELEASE</version>  
             </dependency>  
             <dependency>  
                 <groupId>org.apache.activemq</groupId>  
