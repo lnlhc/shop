@@ -22,5 +22,6 @@
 		<property name="locations" value="classpath:/config/*Config.properties" />
 	</bean>
 	<import resource="classpath*:/config/spring-mq.xml"></import>
+	<!-- <import resource="classpath*:/config/spring-application-product.xml"></import> -->
 	
 </beans>

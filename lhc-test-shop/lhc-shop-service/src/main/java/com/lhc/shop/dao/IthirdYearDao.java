@@ -1,4 +1,4 @@
-package com.lhc.shop.dao.test;
+package com.lhc.shop.dao;
 
 import java.util.List;
 import java.util.Map;
