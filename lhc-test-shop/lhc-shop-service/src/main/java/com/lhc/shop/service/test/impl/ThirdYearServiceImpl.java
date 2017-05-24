@@ -6,7 +6,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.lhc.shop.dao.test.IthirdYearDao;
+import com.lhc.shop.dao.IthirdYearDao;
 import com.lhc.shop.service.test.IthirdYearService;
 @Service
 public class ThirdYearServiceImpl implements IthirdYearService{

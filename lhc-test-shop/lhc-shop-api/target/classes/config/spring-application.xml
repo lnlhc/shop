@@ -23,4 +23,5 @@
 	</bean>
 	
 	<import resource="classpath*:/config/spring-mq.xml"></import>
+	<!-- <import resource="classpath*:/config/spring-dubbo-consumer.xml" /> -->
 </beans>
