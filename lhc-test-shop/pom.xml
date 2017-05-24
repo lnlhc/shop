@@ -24,7 +24,7 @@
                 <djr.password>srdb_user</djr.password>
                 
                  <!--******************    mq    ****************** -->
-				<mqbrokerURL><![CDATA[tcp://10.165.3.131:61616]]></mqbrokerURL>
+				<mqbrokerURL><![CDATA[tcp://10.165.3.132:61616]]></mqbrokerURL>
 				<mquserName>system</mquserName>
 				<mqpassword>123456</mqpassword>
                 
