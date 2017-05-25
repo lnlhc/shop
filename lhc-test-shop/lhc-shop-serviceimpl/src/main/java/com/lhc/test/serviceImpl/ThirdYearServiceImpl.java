@@ -1,5 +1,6 @@
 package com.lhc.test.serviceImpl;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
@@ -10,7 +11,7 @@ import com.lhc.test.dao.IthirdYearDao;
 import com.lhc.test.service.IthirdYearService;
 
 @Service
-public class ThirdYearServiceImpl implements IthirdYearService{
+public class ThirdYearServiceImpl implements IthirdYearService,Serializable{
 
 	@Autowired
 	private IthirdYearDao thirdYearDao;
