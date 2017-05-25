@@ -7,6 +7,8 @@
   <modules>
   	<module>lhc-shop-api</module>
   	<module>lhc-shop-service</module>
+  	<module>lhc-shop-service-impl</module>
+  	<module>lhc-shop-serviceimpl</module>
   </modules>
   <!--******************    配置文件   ****************** -->
   
@@ -98,6 +100,11 @@
 		        <groupId>com.github.sgroschupf</groupId>
 		        <artifactId>zkclient</artifactId>
 		        <version>0.1</version>  
+		      </dependency>
+		       <dependency>
+		        <groupId>org.apache.zookeeper</groupId>
+		        <artifactId>zookeeper</artifactId>
+		        <version>3.4.8</version>  
 		      </dependency>
 </dependencies>
 </project>
