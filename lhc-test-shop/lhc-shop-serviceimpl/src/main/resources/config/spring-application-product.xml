@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+	<dubbo:application name="lhc-shop-provider" /> 
+	<dubbo:registry protocol="zookeeper" address="${zkClient}" client="curator" timeout="${dubboTimeOut}" />
+	
+	<dubbo:protocol name="dubbo" port="${dubboPort}" serialization="kryo" threadpool="cached"/>
+    
+    <!-- 测试暴露服务 -->
+	<bean id="thirdServiceImpl" class="com.lhc.test.serviceImpl.ThirdYearServiceImpl"/>
+	<dubbo:service timeout="10000"  interface="com.lhc.test.service.IthirdYearService" 
+		ref="thirdServiceImpl" group="${dubboGroup}"  version="${dubboVerson}" owner="liuhaichao">
+	</dubbo:service>
+	
+</beans>

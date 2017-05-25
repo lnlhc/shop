@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lhc.test.dao.IthirdYearDao">
+
+
+	
+	<!--查询最新50条中奖名单  -->
+	<select id="getUserWinnerMsg" resultType="java.util.Map">
+		select u.u_user_phone phone,y.a_prize_type from t_active_three_year_four y,t_user u
+		where y.a_user_id = u.u_id and a_status =1 and a_prize_type in(1,2,3,4,5,6,7)
+		order by a_use_date desc limit 50;
+	</select>
+	
+</mapper>
