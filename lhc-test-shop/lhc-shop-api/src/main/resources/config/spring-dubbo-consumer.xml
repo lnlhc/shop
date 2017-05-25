@@ -21,7 +21,7 @@
 	<dubbo:registry protocol="zookeeper" address="${zkClient}"
 		client="curator" timeout="${dubboTimeOut}" />
 	
-	<dubbo:protocol name="dubbo" port="${dubboPort}" serialization="kryo" threadpool="cached"/>
+	<dubbo:protocol name="dubbo" port="${dubboPort}"  threadpool="cached"/>
 
 
 	<!-- 测试消费 -->
