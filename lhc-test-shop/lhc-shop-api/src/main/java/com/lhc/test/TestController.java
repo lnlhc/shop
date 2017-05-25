@@ -13,9 +13,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.lhc.shop.service.test.IthirdYearService;
-import com.lhc.shop.utils.ActiveStatusConstants;
-import com.lhc.shop.utils.Response;
+import com.lhc.test.service.IthirdYearService;
+import com.lhc.utils.ActiveStatusConstants;
+import com.lhc.utils.Response;
 
 import net.sf.json.JSONObject;
 
@@ -23,10 +23,10 @@ import net.sf.json.JSONObject;
 @RequestMapping("/shop/test")    
 public class TestController {
 	private final Logger logger = Logger.getLogger(getClass());
-	
 	@Autowired
 	private IthirdYearService thirdService;
 	
+
 	/**
 	 * @Description: 3、查询最新50条用户中奖名单
 	 * @param token

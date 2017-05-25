@@ -8,8 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.lhc.shop.utils.ActiveStatusConstants;
-import com.lhc.shop.utils.Response;
+import com.lhc.utils.ActiveStatusConstants;
+import com.lhc.utils.Response;
+
 
 @Controller
 @RequestMapping("/shop/jms")
