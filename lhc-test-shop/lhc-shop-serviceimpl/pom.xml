@@ -159,6 +159,6 @@
 		</dependency>
   </dependencies>
   <build>
-    <finalName>lhc-shop-serviceimpl</finalName>
+    <finalName>ROOT</finalName>
   </build>
 </project>

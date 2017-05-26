@@ -10,7 +10,7 @@
 	<!-- scan -->
 	<context:annotation-config/>
 
-	<context:component-scan base-package="com.lhc" />
+	<context:component-scan base-package="com.lhc.test" />
 	
 	<bean id="jsonConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" />
 
