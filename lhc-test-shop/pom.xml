@@ -26,12 +26,12 @@
                 <djr.password>srdb_user</djr.password>
                 
                  <!--******************    mq    ****************** -->
-				<mqbrokerURL><![CDATA[tcp://10.165.3.132:61616]]></mqbrokerURL>
+				<mqbrokerURL><![CDATA[tcp://10.165.3.144:61616]]></mqbrokerURL>
 				<mquserName>system</mquserName>
 				<mqpassword>123456</mqpassword>
 				
 				<!--******************    zk    ****************** -->
-				<zkClient>10.165.3.132:2181</zkClient>
+				<zkClient>10.165.3.144:2181</zkClient>
 				
 				<!--******************    dubbo    ****************** -->
 				<dubboGroup>lhc</dubboGroup>
