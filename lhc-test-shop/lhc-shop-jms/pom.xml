@@ -19,7 +19,7 @@
   <name>lhc-shop-jms Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <build>
-    <finalName>lhc-shop-jms</finalName>
+    <finalName>ROOT</finalName>
   </build>
   
   <dependencies>
@@ -150,4 +150,5 @@
 			<version>2.4.4</version>
 		</dependency>
   </dependencies>
+  
 </project>
