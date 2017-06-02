@@ -7,8 +7,8 @@
   <modules>
   	<module>lhc-shop-api</module>
   	<module>lhc-shop-service</module>
-  	<module>lhc-shop-service-impl</module>
   	<module>lhc-shop-serviceimpl</module>
+  	<module>lhc-shop-jms</module>
   </modules>
   <!--******************    配置文件   ****************** -->
   
