@@ -12,10 +12,15 @@
   	<module>lhc-shop-api</module>
   	<module>lhc-shop-service</module>
 <<<<<<< HEAD
+<<<<<<< HEAD
   	<module>lhc-shop-jms</module>
 =======
   	<module>lhc-shop-service-impl</module>
   	<module>lhc-shop-serviceimpl</module>
+>>>>>>> develop
+=======
+  	<module>lhc-shop-serviceimpl</module>
+  	<module>lhc-shop-jms</module>
 >>>>>>> develop
   </modules>
   <!--******************    配置文件   ****************** -->
@@ -33,7 +38,7 @@
                 <!--******************    db    ****************** -->
 >>>>>>> develop
                 <djr.driverClass>org.srdbsql.Driver</djr.driverClass>
-                <djr.url>jdbc:srdbsql://10.167.202.61:1976/djr0316</djr.url>
+                <djr.url>jdbc:srdbsql://10.167.202.61:1975/djr0316</djr.url>
                 <djr.user>srdb_user</djr.user>
                 <djr.password>srdb_user</djr.password>
                 

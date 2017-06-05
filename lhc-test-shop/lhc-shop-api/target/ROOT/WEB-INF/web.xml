@@ -10,11 +10,6 @@
 		<param-value>classpath*:/config/spring-application*.xml</param-value>
 	</context-param>
 	
-	<!--Spring监听器  -->
-	<listener>
-		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-	</listener>
-	
 	<!-- 添加日志监听器 -->
 	<context-param>
 		<param-name>log4jConfigLocation</param-name>
@@ -25,6 +20,10 @@
 		</listener-class>
 	</listener>
 	
+	<!--Spring监听器  -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
 	<!-- 编码过滤器 -->
 	<filter>
 		<filter-name>encodingFilter</filter-name>
@@ -55,7 +54,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>spring-mvc</servlet-name>
-		<url-pattern>/</url-pattern>
+		<url-pattern>/*</url-pattern>
 	</servlet-mapping>
 	
 
