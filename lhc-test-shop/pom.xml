@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> develop
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -98,6 +99,8 @@
 <<<<<<< HEAD
 </dependencies>
 =======
+=======
+>>>>>>> d4dd3b6f9b7ca2d11ef0564e3aa8bb89245553f2
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.lhc-shop</groupId>
@@ -107,6 +110,8 @@
   <modules>
   	<module>lhc-shop-api</module>
   	<module>lhc-shop-service</module>
+  	<module>lhc-shop-serviceimpl</module>
+  	<module>lhc-shop-jms</module>
   </modules>
   <!--******************    配置文件   ****************** -->
   
@@ -124,12 +129,12 @@
                 <djr.password>srdb_user</djr.password>
                 
                  <!--******************    mq    ****************** -->
-				<mqbrokerURL><![CDATA[tcp://10.165.3.132:61616]]></mqbrokerURL>
+				<mqbrokerURL><![CDATA[tcp://10.165.3.144:61616]]></mqbrokerURL>
 				<mquserName>system</mquserName>
 				<mqpassword>123456</mqpassword>
 				
 				<!--******************    zk    ****************** -->
-				<zkClient>10.165.3.132:2181</zkClient>
+				<zkClient>10.165.3.144:2181</zkClient>
 				
 				<!--******************    dubbo    ****************** -->
 				<dubboGroup>lhc</dubboGroup>
@@ -199,40 +204,10 @@
 		        <artifactId>zkclient</artifactId>
 		        <version>0.1</version>  
 		      </dependency>
-</dependencies>
->>>>>>> develop
-=======
-		<dependency>  
-                <groupId>org.springframework</groupId>  
-                <artifactId>spring-jms</artifactId>  
-                <version>4.1.2.RELEASE</version>  
-            </dependency>  
-            <dependency>  
-                <groupId>org.apache.activemq</groupId>  
-                <artifactId>activemq-all</artifactId>  
-                <version>5.11.1</version>  
-                </dependency>  
-            <dependency>  
-                <groupId>javax.jms</groupId>  
-                <artifactId>jms</artifactId>  
-                <version>1.1</version>  
-            </dependency>
-            <!-- dubbo -->
-		      <dependency>
-		        <groupId>com.alibaba</groupId>
-		        <artifactId>dubbo</artifactId>
-		        <version>2.8.4</version>  
-		      </dependency>
-		      <dependency>
-		        <groupId>com.github.sgroschupf</groupId>
-		        <artifactId>zkclient</artifactId>
-		        <version>0.1</version>  
-		      </dependency>
 		       <dependency>
 		        <groupId>org.apache.zookeeper</groupId>
 		        <artifactId>zookeeper</artifactId>
 		        <version>3.4.8</version>  
 		      </dependency>
 </dependencies>
->>>>>>> develop
 </project>
