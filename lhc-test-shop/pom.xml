@@ -39,7 +39,7 @@
                 <!--******************    db    ****************** -->
 >>>>>>> develop
                 <djr.driverClass>org.srdbsql.Driver</djr.driverClass>
-                <djr.url>jdbc:srdbsql://10.167.202.61:1975/djr0316</djr.url>
+                <djr.url>jdbc:srdbsql://10.167.202.61:1976/djr0316</djr.url>
                 <djr.user>srdb_user</djr.user>
                 <djr.password>srdb_user</djr.password>
                 
