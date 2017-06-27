@@ -28,6 +28,7 @@ public class MessageReceiver implements MessageListener {
 	// 接收消息
 	@SuppressWarnings("all")
 	public void onMessage(final Message message) {
+		System.out.println(message);;
 		if (message instanceof MapMessage) {
 			MapMessage map = (MapMessage) message;
 			try {
@@ -51,7 +52,7 @@ public class MessageReceiver implements MessageListener {
 	 * @throws Exception
 	 */
 	public void processMessage(MapMessage message) throws Exception {
-		log.info(new Date() + "jms recive message >>>>"+ message);
+		log.info(new Date() + "收到的内容"+ message);
 		IMessageSender sender = this.factory.getMessageSender(message.getString(MessageConstant.MessageType));
 		
 		if(null == sender){

@@ -28,7 +28,7 @@ public class SMSMessageSenderImpl implements IMessageSender {
     	while(true){
     		if (message != null) {
         		jms.receive();
-        		log.info("接收的消息为:"+ message);
+        		log.info("接收的消息为:"+ message.getInt("i"));
     		}else{
     			log.info("消息已全部消费完毕");
     		}
